@@ -4,8 +4,8 @@
 	    <div class="article-header">
 			<div class="row">
 				<div class="small-11 small-centered large-12 large-uncentered columns">
-					<h1><a href="index.html">WDD Column</a></h1>
-					<a href="#" class="nav-menu right-off-canvas-toggle"><span class="icon-menu"></span></a>
+					<h1><a href="#list">WDD Column</a></h1>
+					<a class="nav-menu right-off-canvas-toggle"><span class="icon-menu"></span></a>
 				</div>
 			</div>
 		</div>
@@ -27,19 +27,19 @@
 					<button class="article-button">Add Article</button>
 					<article>
 						<img src="images/avatar.png">
-						<a href="detail.html" class="article-title">Debauchery Tea Party</a>
+						<a href="#/detail" class="article-title">Debauchery Tea Party</a>
 						<span class="article-date">February 13, 2014 2:03PM</span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
 					</article>
 					<article>
 						<img src="images/avatar.png">
-						<a href="#" class="article-title">The Killing Joke</a>
+						<a href="#/detail" class="article-title">The Killing Joke</a>
 						<span class="article-date">February 13, 2014 2:03PM</span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
 					</article>
 					<article>
 						<img src="images/avatar.png">
-						<a href="#" class="article-title">Dayman: Fighter of the Nightman</a>
+						<a href="#/detail" class="article-title">Dayman: Fighter of the Nightman</a>
 						<span class="article-date">February 13, 2014 2:03PM</span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
 					</article>

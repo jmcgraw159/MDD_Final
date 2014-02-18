@@ -4,8 +4,8 @@
 	    <div class="article-header">
 			<div class="row">
 				<div class="small-11 small-centered large-12 large-uncentered columns">
-					<h1><a href="articles.html">WDD Column</a></h1>
-					<a href="#" class="nav-menu right-off-canvas-toggle"><span class="icon-menu"></span></a>
+					<h1><a href="#/list">WDD Column</a></h1>
+					<a class="nav-menu right-off-canvas-toggle"><span class="icon-menu"></span></a>
 				</div>
 			</div>
 		</div>
