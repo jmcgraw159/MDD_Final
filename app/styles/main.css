@@ -2,6 +2,17 @@ html, body, body > .holder-canvas, .off-canvas-wrap {
   height:100%;
 }
 
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?14260954');
+  src: url('../font/fontello.eot?14260954#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?14260954') format('woff'),
+       url('../font/fontello.ttf?14260954') format('truetype'),
+       url('../font/fontello.svg?14260954#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body  {
   font-family: 'Helvetica', 'Arial', sans-serif;
   background-color: #f2f2f2;
@@ -38,6 +49,10 @@ button  {
   transform: translateY(-50%);
 }
 
+#landing span  {
+  position: relative;
+  top: 3px;
+}
 
 h1, h1 > a  {
   font-size: 60px;
@@ -47,18 +62,6 @@ h1, h1 > a  {
 
 h1 > a:hover  {
   color: #f2f2f2;
-}
-
-
-@font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.eot?14260954');
-  src: url('../font/fontello.eot?14260954#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff?14260954') format('woff'),
-       url('../font/fontello.ttf?14260954') format('truetype'),
-       url('../font/fontello.svg?14260954#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
  [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -286,16 +289,22 @@ h1 > a:hover  {
 }
 
 @media only screen and (max-width: 528px) {
-  h1 > a  {
+
+  #landing h1, h1 > a  {
     font-size: 42px;
   }
+
+  #landing a  {
+    width: auto;
+  }
+
 
   .article-button  {
     float: none;
     width: 100%;
   }
 
-  .article-body article p  {
+  #landing p, .article-body article p  {
     font-size: 16px;
     line-height: 24px;
   }
