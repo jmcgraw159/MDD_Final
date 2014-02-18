@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('mddFinalApp', [
+var App = angular.module('mddFinalApp', [
   'ngRoute'
 ])
-  .config(function ($routeProvider) {
+  App.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.tpl',
@@ -25,3 +25,7 @@ angular.module('mddFinalApp', [
         redirectTo: '/'
       });
   });
+
+  App.run(function($rootScope){
+    $rootScope.$apply($(document).foundation());
+});
