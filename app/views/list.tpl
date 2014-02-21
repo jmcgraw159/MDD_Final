@@ -25,12 +25,12 @@
 			<div class="row article-body">
 				<div class="small-11 small-centered large-12 large-uncentered columns">
 					<button class="article-button">Add Article</button>
-					<article ng-repeat="item in data.response.posts">
-						<a class="article-title">{{item.title}}</a>
+					<article ng-repeat="($id, item) in data.response.posts">
+						<a href="#/detail/{{item.id}}" class="article-title">{{item.title}}</a>
 						<span class="article-date">{{item.date}}</span>
 						<p>{{item.body | limitTo:150}}...</p>
 					</article>
-<!-- 					<a ng-click="loginObject.$logout()">Logout</a> -->
+					<a ng-click="loginObject.$logout()">Logout</a>
 				</div>
 			</div>
 		</div>

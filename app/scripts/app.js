@@ -16,7 +16,7 @@ App.config(function ($routeProvider) {
       templateUrl: 'views/list.tpl',
       controller: 'ApiCtrl'
     })
-    .when('/detail', {
+    .when('/detail/:id', {
       templateUrl: 'views/detail.tpl',
       controller: 'DetailCtrl'
     })

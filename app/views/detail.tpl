@@ -25,10 +25,8 @@
 			<div class="row article-body">
 				<div class="small-11 small-centered large-12 large-uncentered columns">
 					<article>
-						<h2>Article Title</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
+						<h2>{{article.response.posts[0].title}}</h2>
+						<p>{{article.response.posts[0].body}}</p>
 						<div class="article-poster">
 							<img src="images/avatar.png">
 							<p>Posted by <a href="#">Jeremy McGraw</a> on <span class="article-date">February 13, 2014 2:03PM</span>.</p>
