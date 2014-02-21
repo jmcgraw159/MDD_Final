@@ -27,7 +27,7 @@
 					<button class="article-button">Add Article</button>
 					<article ng-repeat="($id, item) in data.response.posts">
 						<a href="#/detail/{{item.id}}" class="article-title">{{item.title}}</a>
-						<span class="article-date">{{item.date}}</span>
+						<span class="article-date">{{(item.timestamp * 1000) | date:'medium'}}</span>
 						<p>{{item.body | limitTo:150}}...</p>
 					</article>
 					<a ng-click="loginObject.$logout()">Logout</a>

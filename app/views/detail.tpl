@@ -28,8 +28,8 @@
 						<h2>{{article.response.posts[0].title}}</h2>
 						<p ng-bind-html="trustSnippet()"></p>
 						<div class="article-poster">
-							<img src="images/avatar.png">
-							<p>Posted by <a href="#">Jeremy McGraw</a> on <span class="article-date">February 13, 2014 2:03PM</span>.</p>
+							<img ng-src="{{image}}">
+							<p>Posted by <a href="{{article.response.blog.url}}" target="_blank">{{article.response.posts[0].blog_name}}</a> on <span class="article-date">{{date | date:'medium'}}</span>.</p>
 						</div>
 					</article>
 					<div class="comment-form">
