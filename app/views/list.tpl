@@ -25,24 +25,12 @@
 			<div class="row article-body">
 				<div class="small-11 small-centered large-12 large-uncentered columns">
 					<button class="article-button">Add Article</button>
-					<article>
-						<img src="images/avatar.png">
-						<a href="#/detail" class="article-title">Debauchery Tea Party</a>
-						<span class="article-date">February 13, 2014 2:03PM</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
+					<article ng-repeat="item in data.response.posts">
+						<a class="article-title">{{item.title}}</a>
+						<span class="article-date">{{item.date}}</span>
+						<p>{{item.body | limitTo:150}}...</p>
 					</article>
-					<article>
-						<img src="images/avatar.png">
-						<a href="#/detail" class="article-title">The Killing Joke</a>
-						<span class="article-date">February 13, 2014 2:03PM</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
-					</article>
-					<article>
-						<img src="images/avatar.png">
-						<a href="#/detail" class="article-title">Dayman: Fighter of the Nightman</a>
-						<span class="article-date">February 13, 2014 2:03PM</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, perferendis, ex neque est deleniti laboriosam assumenda magni officiis quasi voluptate eius magnam labore enim dolore non beatae sit in placeat!</p>
-					</article>
+<!-- 					<a ng-click="loginObject.$logout()">Logout</a> -->
 				</div>
 			</div>
 		</div>

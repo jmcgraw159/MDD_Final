@@ -1,31 +1,51 @@
 'use strict';
 
+/*global Firebase */
 var App = angular.module('mddFinalApp', [
-  'ngRoute'
-])
-  App.config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.tpl',
-        controller: 'MainCtrl'
-      })
-      .when('/list', {
-        templateUrl: 'views/list.tpl',
-        controller: 'MainCtrl'
-      })
-      .when('/detail', {
-        templateUrl: 'views/detail.tpl',
-        controller: 'MainCtrl'
-      })
-      .when('/post', {
-        templateUrl: 'views/post.tpl',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  'ngRoute',
+  'firebase'
+]);
+
+App.config(function ($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/main.tpl',
+      controller: 'MainCtrl'
+    })
+    .when('/list', {
+      templateUrl: 'views/list.tpl',
+      controller: 'ApiCtrl'
+    })
+    .when('/detail', {
+      templateUrl: 'views/detail.tpl',
+      controller: 'DetailCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
+
+App.run(['$firebaseSimpleLogin', '$rootScope', '$window', '$location', function ($firebaseSimpleLogin, $rootScope, $window, $location){
+
+  var db = new Firebase('https://wddcolumn.firebaseio.com/');
+
+  $rootScope.loginObject = $firebaseSimpleLogin(db);
+
+  $rootScope.$on('$firebaseSimpleLogin:login', function(e, user) {
+
+    if(user) {
+      console.log('Username: ' + $rootScope.loginObject.user.username);
+      $window.location.href = '#/list';
+    }else  {
+      console.log('No user');
+    }
+
   });
 
-  App.run(function($rootScope){
-    $rootScope.$apply($(document).foundation());
-});
+  $rootScope.$on('$firebaseSimpleLogin:logout', function() {
+    $location.path('/');
+  });
+
+    // $rootScope.$apply($(document).foundation());
+
+}]);
