@@ -26,7 +26,7 @@
 				<div class="small-11 small-centered large-12 large-uncentered columns">
 					<article>
 						<h2>{{article.response.posts[0].title}}</h2>
-						<p>{{article.response.posts[0].body}}</p>
+						<p ng-bind-html="trustSnippet()"></p>
 						<div class="article-poster">
 							<img src="images/avatar.png">
 							<p>Posted by <a href="#">Jeremy McGraw</a> on <span class="article-date">February 13, 2014 2:03PM</span>.</p>
