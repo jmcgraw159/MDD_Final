@@ -136,10 +136,10 @@ h1 > a:hover  {
   background-image: linear-gradient(bottom, rgba(255,255,255,.05) 0%, rgba(0,0,1,.05) 100%);
 }
 
-.inner-wrap {
+/*.inner-wrap {
   min-height: 100%;
-/*  overflow: hidden;*/
-}
+  overflow: hidden;
+}*/
 
 .article-header  {
   position: fixed;
@@ -148,6 +148,26 @@ h1 > a:hover  {
   width: 100%;
   z-index: 1;
   box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+}
+
+.logout  {
+  width: 100px;
+  line-height: 50px;
+  text-align: center;
+  color: #f2f2f2;
+  background-color: #457fa3;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  font-size: 18px;
+  border: 1px solid #3b7193;
+  border-radius: 5px;
+}
+
+.logout:hover  {
+  background-color: #3b7193;
+  color: #f2f2f2;
+  border-color: #32617f;
 }
 
 .nav  {
@@ -298,6 +318,14 @@ h1 > a:hover  {
   #landing a  {
     width: auto;
   }
+
+  .logout  {
+    top: 30px;
+    font-size: 16px;
+    width: 65px;
+    line-height: 40px;
+  }
+
 
   .article-button  {
     float: none;
