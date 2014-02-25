@@ -26,7 +26,7 @@
 				<div class="comment">
 					<img ng-src="{{item.avatar}}">
 					<a>{{item.username}}</a>
-					<span class="article-date">{{item.date}}</span>
+					<span class="article-date">{{item.date | date:'medium'}}</span>
 					<p>{{item.comment}}</p>
 				</div>
 			</div>

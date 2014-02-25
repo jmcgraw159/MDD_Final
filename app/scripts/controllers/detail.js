@@ -28,9 +28,10 @@ App.controller('CommentCtrl', ['$scope', '$rootScope', '$firebase', '$routeParam
     $scope.comments = $firebase(new Firebase("https://wddcolumn.firebaseio.com/comments/" + $routeParams.id));
 
     $scope.commentDate = Date();
+    $scope.parsedDate = Date.parse($scope.commentDate);
 
     $scope.saveData = function ()  {
-      $scope.comments.$add({id: $routeParams.id, username: $rootScope.loginObject.user.username, avatar: $rootScope.loginObject.user.avatar_url, date: $scope.commentDate, comment: $scope.comment.message});
+      $scope.comments.$add({username: $rootScope.loginObject.user.username, avatar: $rootScope.loginObject.user.avatar_url, date: $scope.parsedDate, comment: $scope.comment.message});
 
       $scope.comment.message = '';
 
