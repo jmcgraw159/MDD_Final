@@ -17,14 +17,17 @@
 					<p>Posted by <a href="{{article.response.blog.url}}" target="_blank">{{article.response.posts[0].blog_name}}</a> on <span class="article-date">{{date | date:'medium'}}</span>.</p>
 				</div>
 			</article>
-			<div class="comment-form">
+			<div ng-controller="CommentCtrl" class="comment-form">
 				<form>
-					<textarea></textarea>
-					<button class="article-button">Add Comment</button>
+					<textarea ng-model="comment.message"></textarea>
+					<button class="article-button" ng-click="saveData()">Add Comment</button>
 				</form>
 			</div>
 			<div class="comment-area">
-				<div class="comment">
+				<div class="comment" ng-repeat="item in remoteData">
+					<p>{{item}}</p>
+				</div>
+<!-- 				<div class="comment">
 					<img src="images/avatar.png">
 					<a href="#">Jeremy McGraw</a>
 					<span class="article-date">February 13, 2014 2:03PM</span>
@@ -35,7 +38,7 @@
 					<a href="#">Jeremy McGraw</a>
 					<span class="article-date">February 13, 2014 2:03PM</span>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ex ab veniam error enim quos minima tenetur voluptas voluptatum rerum. Reprehenderit, repudiandae ducimus error unde aut sunt porro nobis incidunt?</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

@@ -46,6 +46,4 @@ App.run(['$firebaseSimpleLogin', '$rootScope', '$window', '$location', function 
     $location.path('/');
   });
 
-    // $rootScope.$apply($(document).foundation());
-
 }]);

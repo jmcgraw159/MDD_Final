@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('mddFinalApp')
-   .controller('DetailCtrl', ['$scope', '$http', '$routeParams', '$sce', function ($scope, $http, $routeParams, $sce) {
+var App = angular.module('mddFinalApp')
+   App.controller('DetailCtrl', ['$scope', '$http', '$routeParams', '$sce', function ($scope, $http, $routeParams, $sce) {
 
     $http.jsonp('http://api.tumblr.com/v2/blog/wddcolumn.tumblr.com/posts/text?callback=JSON_CALLBACK&api_key=BhWySvI9jLXAwhFCYujxtqhAGw9e6BSOpxwiyKNkRduq1qMN7g&type=text&id=' + $routeParams.id)
 	.success(function(data){
@@ -20,5 +20,17 @@ angular.module('mddFinalApp')
 	.error(function(data) {
 		  console.log(data);
 	  });
+
+  }]);
+
+  App.controller('CommentCtrl', ['$scope', '$rootScope', 'FireConn', '$routeParams', function ($scope, $rootScope, FireConn, $routeParams) {
+
+    FireConn.$bind($scope, 'remoteData');
+
+    $scope.saveData = function ()  {
+    FireConn.$add({id: $routeParams.id, username: $rootScope.loginObject.user.username, comment: $scope.comment.message});
+    };
+
+    $scope.remoteData = FireConn;
 
   }]);
