@@ -23,20 +23,17 @@ App.controller('DetailCtrl', ['$scope', '$http', '$routeParams', '$sce', functio
 
   }]);
 
-App.controller('CommentCtrl', ['$scope', '$rootScope', 'FireConn', '$routeParams', function ($scope, $rootScope, FireConn, $routeParams) {
+App.controller('CommentCtrl', ['$scope', '$rootScope', '$firebase', '$routeParams', function ($scope, $rootScope, $firebase, $routeParams) {
 
-    FireConn.$bind($scope, 'remoteData');
+    $scope.comments = $firebase(new Firebase("https://wddcolumn.firebaseio.com/comments/" + $routeParams.id));
 
     $scope.commentDate = Date();
 
     $scope.saveData = function ()  {
-      FireConn.$add({id: $routeParams.id, username: $rootScope.loginObject.user.username, avatar: $rootScope.loginObject.user.avatar_url, date: $scope.commentDate, comment: $scope.comment.message});
+      $scope.comments.$add({id: $routeParams.id, username: $rootScope.loginObject.user.username, avatar: $rootScope.loginObject.user.avatar_url, date: $scope.commentDate, comment: $scope.comment.message});
 
       $scope.comment.message = '';
 
     };
-
-    $scope.remoteData = FireConn;
-    console.log($scope.remoteData);
 
   }]);

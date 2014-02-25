@@ -301,6 +301,10 @@ h1 > a:hover  {
   margin-bottom: 30px;
 }
 
+.comment-area  {
+  clear: both;
+}
+
 .comment  {
   margin-bottom: 50px;
 }

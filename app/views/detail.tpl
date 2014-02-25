@@ -22,7 +22,7 @@
 					<textarea ng-model="comment.message"></textarea>
 					<button class="article-button" ng-click="saveData()">Add Comment</button>
 				</form>
-				<div class="comment-area" ng-repeat="item in remoteData">
+				<div class="comment-area" ng-repeat="item in comments">
 				<div class="comment">
 					<img ng-src="{{item.avatar}}">
 					<a>{{item.username}}</a>
