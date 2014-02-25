@@ -23,17 +23,11 @@
 					<button class="article-button" ng-click="saveData()">Add Comment</button>
 				</form>
 			</div>
-			<div class="comment-area">
-				<div class="comment" ng-repeat="item in remoteData">
+			<div class="comment-area" ng-repeat="item in remoteData">
+				<div class="comment">
 					<p>{{item}}</p>
 				</div>
-<!-- 				<div class="comment">
-					<img src="images/avatar.png">
-					<a href="#">Jeremy McGraw</a>
-					<span class="article-date">February 13, 2014 2:03PM</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ex ab veniam error enim quos minima tenetur voluptas voluptatum rerum. Reprehenderit, repudiandae ducimus error unde aut sunt porro nobis incidunt?</p>
-				</div>
-				<div class="comment">
+<!-- 			<div class="comment">
 					<img src="images/avatar.png">
 					<a href="#">Jeremy McGraw</a>
 					<span class="article-date">February 13, 2014 2:03PM</span>

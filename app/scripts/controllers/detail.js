@@ -1,6 +1,6 @@
 'use strict';
 
-var App = angular.module('mddFinalApp')
+var App = angular.module('mddFinalApp');
    App.controller('DetailCtrl', ['$scope', '$http', '$routeParams', '$sce', function ($scope, $http, $routeParams, $sce) {
 
     $http.jsonp('http://api.tumblr.com/v2/blog/wddcolumn.tumblr.com/posts/text?callback=JSON_CALLBACK&api_key=BhWySvI9jLXAwhFCYujxtqhAGw9e6BSOpxwiyKNkRduq1qMN7g&type=text&id=' + $routeParams.id)
@@ -27,8 +27,13 @@ var App = angular.module('mddFinalApp')
 
     FireConn.$bind($scope, 'remoteData');
 
+    $scope.commentDate = Date();
+
     $scope.saveData = function ()  {
-    FireConn.$add({id: $routeParams.id, username: $rootScope.loginObject.user.username, comment: $scope.comment.message});
+    FireConn.$add({id: $routeParams.id, username: $rootScope.loginObject.user.username, avatar: $rootScope.loginObject.user.avatar_url, date: $scope.commentDate, comment: $scope.comment.message});
+
+    $scope.comment.message = '';
+
     };
 
     $scope.remoteData = FireConn;
