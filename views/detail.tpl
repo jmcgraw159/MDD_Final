@@ -9,6 +9,7 @@
 <div class="article-bg">
 	<div class="row article-body">
 		<div class="small-11 small-centered large-12 large-uncentered columns">
+			<a id="gb" href="#/list">Go Back</a>
 			<article>
 				<h2>{{article.response.posts[0].title}}</h2>
 				<p ng-bind-html="trustSnippet()"></p>
