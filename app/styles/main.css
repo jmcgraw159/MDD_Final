@@ -136,11 +136,6 @@ h1 > a:hover  {
   background-image: linear-gradient(bottom, rgba(255,255,255,.05) 0%, rgba(0,0,1,.05) 100%);
 }
 
-/*.inner-wrap {
-  min-height: 100%;
-  overflow: hidden;
-}*/
-
 .article-header  {
   position: fixed;
   top: 0;
@@ -169,44 +164,6 @@ h1 > a:hover  {
   color: #f2f2f2;
   border-color: #32617f;
 }
-
-.nav  {
-  list-style: none;
-  text-align: center;
-  margin-left: 0;
-  color: #f2f2f2;
-}
-
-.nav li  {
-  line-height: 50px;
-}
-
-.nav li:nth-child(n+2)  {
-  border-bottom: 1px solid #212122;
-}
-
-.nav li:nth-child(n+3):hover  {
-  background-color: #3b3a3b;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.nav li img  {
-  margin-top: 15px;
-}
-
-
-.nav li a  {
-  display: block;
-  width: 100%;
-  color: #f2f2f2;
-}
-
-.nav li a:hover  {
-  color: #579dc9;
-}
-
 
 .article-bg  {
   margin-top: 100px;
@@ -290,6 +247,7 @@ h1 > a:hover  {
 
 .article-poster img  {
   margin: 10px 10px;
+  border-radius: 50px;
 }
 
 .article-poster p  {
@@ -309,11 +267,18 @@ h1 > a:hover  {
   margin-bottom: 50px;
 }
 
+.comment img  {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+
 .comment p  {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 528px) {
+@media only screen and (max-width: 554px) {
 
   #landing h1, h1 > a  {
     font-size: 42px;
@@ -329,7 +294,6 @@ h1 > a:hover  {
     width: 65px;
     line-height: 40px;
   }
-
 
   .article-button  {
     float: none;
@@ -361,4 +325,34 @@ h1 > a:hover  {
     display: inline;
   }
 
+  .comment p  {
+    overflow: visible;
+  }
+
+}
+
+@media only screen and (max-width: 395px) {
+    h1 > a  {
+      font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    h1 > a  {
+      font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    h1 > a  {
+      display: block;
+      text-align: center;
+    }
+
+    .logout  {
+      margin-top: 15px;
+      display: block;
+      width: 100%;
+    }
 }
