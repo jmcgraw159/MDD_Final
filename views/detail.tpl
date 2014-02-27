@@ -24,8 +24,8 @@
 					<small class="{{errorClass}}">{{errorMessage}}</small>
 					<button class="article-button" ng-click="saveData()">Add Comment</button>
 				</form>
-				<div class="comment-area" ng-repeat="item in comments">
-					<div class="comment">
+				<div class="comment-area">
+					<div class="comment" ng-repeat="item in comments">
 						<img ng-src="{{item.avatar}}">
 						<a href="http://github.com/{{item.username}}" target="_blank">{{item.username}}</a>
 						<span class="article-date">{{item.date | date:'medium'}}</span>
