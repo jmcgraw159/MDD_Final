@@ -19,7 +19,8 @@
 			</article>
 			<div ng-controller="CommentCtrl" class="comment-form">
 				<form>
-					<textarea ng-model="comment.message"></textarea>
+					<textarea class="{{myTest}}" ng-model="comments.message"></textarea>
+					<small class="{{errorClass}}">{{errorMessage}}</small>
 					<button class="article-button" ng-click="saveData()">Add Comment</button>
 				</form>
 				<div class="comment-area" ng-repeat="item in comments">

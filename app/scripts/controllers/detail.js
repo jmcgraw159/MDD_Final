@@ -37,10 +37,21 @@ App.controller('CommentCtrl', ['$scope', '$rootScope', '$firebase', '$routeParam
     $scope.parsedDate = Date.parse($scope.commentDate);
 
     $scope.saveData = function ()  {
-      $scope.comments.$add({username: $rootScope.loginObject.user.username, avatar: $rootScope.loginObject.user.avatar_url, date: $scope.parsedDate, comment: $scope.comment.message});
 
-      $scope.comment.message = '';
+      if($scope.comments.message === undefined || $scope.comments.message === '' || $scope.comments.message === null) {
+        console.log('error');
 
+        $scope.errorClass = 'error';
+        $scope.errorMessage = 'Message cannot be left blank!'
+
+      }else  {
+        console.log('Success');
+
+        $scope.comments.$add({username: $rootScope.loginObject.user.username, avatar: $rootScope.loginObject.user.avatar_url, date: $scope.parsedDate, comment: $scope.comments.message});
+        $scope.comments.message = '';
+        $scope.errorClass = '';
+        $scope.errorMessage = ''
+      }
     };
 
   }]);
