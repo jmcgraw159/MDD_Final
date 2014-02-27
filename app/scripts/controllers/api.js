@@ -2,9 +2,9 @@
 
 angular.module('mddFinalApp')
   .controller('ApiCtrl', ['$scope', '$rootScope', '$location', '$http', function ($scope, $rootScope, $location, $http) {
-  	// Check to see if the user is logged in
-  	// If user is logged in, show information
-  	// Otherwise take them back the the landing page
+	// Check to see if the user is logged in
+	// If user is logged in, show information
+	// Otherwise take them back the the landing page
 	$rootScope.loginObject.$getCurrentUser()
 	.then(function(user){
 		if(!user){

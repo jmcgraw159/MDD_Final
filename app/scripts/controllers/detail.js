@@ -54,7 +54,7 @@ App.controller('CommentCtrl', ['$scope', '$rootScope', '$firebase', '$routeParam
         console.log('error');
 
         $scope.errorClass = 'error';
-        $scope.errorMessage = 'Message cannot be left blank!'
+        $scope.errorMessage = 'Message cannot be left blank!';
       // Otherwise, add the users username, avatar, time it was added, and the messsage to the database
       }else  {
         console.log('Success');
@@ -66,7 +66,7 @@ App.controller('CommentCtrl', ['$scope', '$rootScope', '$firebase', '$routeParam
 
         // Clear the error class and message to be blank.
         $scope.errorClass = '';
-        $scope.errorMessage = ''
+        $scope.errorMessage = '';
       }
     };
 
