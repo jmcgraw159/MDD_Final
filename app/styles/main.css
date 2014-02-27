@@ -276,6 +276,19 @@ h1 > a:hover  {
   overflow: hidden;
 }
 
+#gb  {
+  display: block;
+  background-color: #ececed;
+  border: 1px solid #cac9cb;
+  width: 100px;
+  text-align: center;
+  line-height: 25px;
+}
+
+#gb:hover  {
+  background-color: #e4e4e6;
+}
+
 @media only screen and (max-width: 554px) {
 
   #landing h1, h1 > a  {
@@ -325,6 +338,10 @@ h1 > a:hover  {
 
   .comment p  {
     overflow: visible;
+  }
+
+  #gb  {
+    width: 100%;
   }
 
 }
