@@ -1,3 +1,3 @@
 WDD Column Video Pitch:
 
-[Link will go here]
+https://www.youtube.com/watch?v=ZZavrqoRUUw
